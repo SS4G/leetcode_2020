@@ -1,3 +1,4 @@
+typedef int bool;
 bool judgeCircle(char *moves){
     int x = 0;
     int y = 0;
