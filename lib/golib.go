@@ -28,3 +28,14 @@ func minInts(A []int) int {
 	}
 	return minVal
 }
+
+func powInt(x, n int) int {
+    if n == 0 {
+		return 1
+	} 
+	half := powInt(x, n / 2)
+	if n % 2 == 0 {
+		return half * half
+	} 
+	return  half * half * x
+}
