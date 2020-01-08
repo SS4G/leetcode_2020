@@ -4,4 +4,4 @@ class Solution(object):
         :type candies: List[int]
         :rtype: int
         """
-        min(len(set(candies)), len(candies) / 2) 
+        return min(len(set(candies)), len(candies) / 2) 
