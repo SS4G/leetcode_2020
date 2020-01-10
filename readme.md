@@ -7,4 +7,4 @@
 6. 全部题目位于leetcode 中文版 [LeetCode-CN](https://leetcode-cn.com/problemset/algorithms/) 当然题解应该参考下英文版 [LeetCode-EN](https://leetcode.com/)
 
 ## Record
-progress now **70/1111 6.3%**  
+progress now **100/1111 9.00%**  
