@@ -4,4 +4,7 @@ class Solution(object):
         :type S: str
         :rtype: List[str]
         """
-        fhu
+
+    
+    def helper(self, src, curIdx, result):
+        while not src[curIdx].isalpha():
