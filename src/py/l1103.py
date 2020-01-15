@@ -6,24 +6,30 @@ class Solution(object):
         :type num_people: int
         :rtype: List[int]
         """
-        root = -0.5 + float((8 * candies + 1) ** 0.5) / (2 * num_people)
-        downTrun = math.floor(root)
-        print(root)
         turn1 = (1 + num_people) * num_people / 2
-        turnn_sum = lambda n: (turn1 + turn1 + num_people**2 * (n - 1)) * n / 2
-        wholeTurnCandies = turnn_sum(downTrun)
-        restCandies = candies - wholeTurnCandies
-        print(downTrun, wholeTurnCandies, restCandies)
-        result = [0, ] * num_people
+        turnn = lambda n: (turn1 + turn1 + num_people ** 2 * (n - 1)) * n / 2
+        n = 1
+        while turnn(n) <= candies:
+            n += 1
+        n -= 1
+        results = [0, ] * num_people
+        for i in range(1, num_people + 1):
+            results[i - 1] += (i + i + num_people * (n - 1)) * n / 2
+        print(results)
+        restCandies = candies - sum(results)
         i = 0
+        base = 1 + n * num_people 
         while restCandies > 0:
-            result[i] += (num_people * downTrun + i)
-            restCandies -= result[i]
+            lastAllocate = base + i
+            results[i] += min(lastAllocate, restCandies)
+            restCandies -= lastAllocate
             i += 1
-        for i in range(len(num_people)):
-            result[i] += ((i + downTrun * num_people + i) * downTrun / 2)
-        return result
+        return results
 
 if __name__ == "__main__":
+    candies = 10
+    num_people = 3
     s = Solution()
-    s.distributeCandies(7, 4)
+    result = s.distributeCandies(candies, num_people)
+    print(result)
+

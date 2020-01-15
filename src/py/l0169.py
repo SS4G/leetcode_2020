@@ -4,6 +4,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+
         stack = []
         for n in nums:
             if len(stack) == 0:

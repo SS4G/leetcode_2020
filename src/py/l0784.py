@@ -23,4 +23,3 @@ class Solution(object):
             results.append("".join(strList))
         return results
     
-
