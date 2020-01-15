@@ -7,3 +7,4 @@ class Solution(object):
     
     def helper(self, src, curIdx, result):
         while not src[curIdx].isalpha():
+            
