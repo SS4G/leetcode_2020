@@ -1,3 +1,4 @@
+import math
 class Solution(object):
     def distributeCandies(self, candies, num_people):
         """
@@ -31,6 +32,4 @@ if __name__ == "__main__":
     s = Solution()
     result = s.distributeCandies(candies, num_people)
     print(result)
-
-
 
